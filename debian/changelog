@@ -1,5 +1,138 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-iptables (1.0.1-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 1.0.1
+    + Drop patches applied upstream
+  * Update d/copyright
+    + Add 'licensecheck' target
+    + Generate d/copyright_hints
+    + Bump dates in d/copyright
+  * Apply 'wrap-and-sort -ast'
+  * Bump standards version to 4.6.2
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Sun, 29 Jan 2023 00:14:53 +0100
+
+python-iptables (1.0.0-2) unstable; urgency=high
+
+  * Team upload.
+
+  [ IOhannes m zmölnig (Debian/GNU) ]
+  * debian/tests/control: Mark import-test as superficial.
+    (Closes: #974489)
+
+  [ Michael Hudson-Doyle ]
+  * debian/patches/0002-fix-locating-_xtables_libdir_with_glibc-2.32.patch:
+    Add patch to fix behaviour with glibc 2.32+.
+
+  [ Boyuan Yang ]
+  * Bump Standards-Version to 4.6.0.
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Repository, Repository-Browse.
+
+ -- Boyuan Yang <byang@debian.org>  Fri, 10 Sep 2021 12:03:43 -0400
+
+python-iptables (1.0.0-1) unstable; urgency=medium
+
+  * New upstream version 1.0.0
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit.
+
+  [ IOhannes m zmölnig (Debian/GNU) ]
+  * Drop patches superseded by upstream
+  * No more files to exclude from upstream tarball
+  * Add salsa-ci configuration
+  * Declare that building this package does not require 'root' powers.
+  * Bump dh-compat to 13
+  * Bump standards version to 4.5.0
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Tue, 28 Jul 2020 12:06:03 +0200
+
+python-iptables (0.14.0~ds-1) unstable; urgency=medium
+
+  * New upstream version 0.14.0~ds
+
+  * Exclude build-artifacts from upstream tarball
+  * Mangle 'ds'-suffix from debian version in d/watch
+  * Bump dh-compat to 12
+  * Bump standards version to 4.4.0
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Tue, 10 Sep 2019 11:56:35 +0200
+
+python-iptables (0.13.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Use debhelper-compat instead of debian/compat.
+  * Drop Python 2 support.
+
+ -- Ondřej Nový <onovy@debian.org>  Fri, 02 Aug 2019 08:52:53 +0200
+
+python-iptables (0.13.0-1) unstable; urgency=medium
+
+  * New upstream version 0.13.0
+  * Refreshed patches
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Thu, 19 Apr 2018 14:23:47 +0200
+
+python-iptables (0.12.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Deprecating priority extra as per policy 4.0.1
+  * d/control: Remove trailing whitespaces
+
+  [ IOhannes m zmölnig (Debian/GNU) ]
+  * Added dependency on python3-distutils
+  * Added patch to fix loading of wrapper-lib with Py2
+  * Marked doc package as multi-arch:foreign
+  * Switched to gbp-pq
+  * Added DebCI smoketests
+  * Included NOTICE file in binary packages
+  * Bumped standards versio to 4.1.4
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Wed, 18 Apr 2018 22:56:49 +0200
+
+python-iptables (0.12.0-1) unstable; urgency=medium
+
+  * New upstream version 0.12.0
+
+  * Removed patches applied upstream
+  * Added Vcs-* stanzas
+  * Bumpded standards version to 4.0.0
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Wed, 21 Jun 2017 13:26:34 +0200
+
+python-iptables (0.11.0-4) unstable; urgency=medium
+
+  * Backported xtables_match_v12 (Closes: #862741)
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Thu, 18 May 2017 00:24:18 +0200
+
+python-iptables (0.11.0-3) unstable; urgency=medium
+
+  * Backported IPv6 mask fix from upstream
+  * Depend on iptables (Closes: #860986)
+    * Backported support for v12 xtables from upstream
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Fri, 28 Apr 2017 22:41:39 +0200
+
+python-iptables (0.11.0-2) unstable; urgency=medium
+
+  * Take Multiarch into account when looking for xtables (Closes: #836704)
+  * Document how to create patches
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Mon, 05 Sep 2016 20:58:02 +0200
+
+python-iptables (0.11.0-1) unstable; urgency=medium
+
+  * Initial packaging (Closes: #836234)
+
+ -- IOhannes m zmölnig (Debian/GNU) <umlaeute@debian.org>  Wed, 31 Aug 2016 23:09:15 +0200

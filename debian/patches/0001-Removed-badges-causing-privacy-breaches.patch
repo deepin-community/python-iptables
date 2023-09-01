@@ -1,0 +1,47 @@
+From: =?utf-8?q?IOhannes_m_zm=C3=B6lnig?= <zmoelnig@umlautQ.umlaeute.mur.at>
+Date: Wed, 31 Aug 2016 22:52:07 +0200
+Subject: Removed badges causing privacy breaches...
+
+---
+ doc/intro.rst | 28 ----------------------------
+ 1 file changed, 28 deletions(-)
+
+diff --git a/doc/intro.rst b/doc/intro.rst
+index 97ec5a0..9ccdf02 100644
+--- a/doc/intro.rst
++++ b/doc/intro.rst
+@@ -32,34 +32,6 @@ If you are looking for ``ebtables`` python bindings, check out
+ 
+ ``Python-iptables`` supports Python 2.6, 2.7 and 3.4.
+ 
+-.. image:: http://api.flattr.com/button/flattr-badge-large.png
+-   :target: https://flattr.com/submit/auto?user_id=ldx&url=https%3A%2F%2Fgithub.com%2Fldx%2Fpython-iptables
+-   :alt: Flattr
+-
+-.. image:: https://pypip.in/v/python-iptables/badge.png
+-   :target: https://pypi.python.org/pypi/python-iptables
+-   :alt: Latest Release
+-
+-.. image:: https://travis-ci.org/ldx/python-iptables.png?branch=master
+-   :target: https://travis-ci.org/ldx/python-iptables
+-   :alt: Build Status
+-
+-.. image:: https://coveralls.io/repos/ldx/python-iptables/badge.svg?branch=codecoverage
+-   :target: https://coveralls.io/r/ldx/python-iptables?branch=codecoverage
+-   :alt: Coverage Status
+-
+-.. image:: https://landscape.io/github/ldx/python-iptables/codecoverage/landscape.svg
+-   :target: https://landscape.io/github/ldx/python-iptables/codecoverage
+-   :alt: Code Health
+-
+-.. image:: https://pypip.in/d/python-iptables/badge.png
+-   :target: https://pypi.python.org/pypi/python-iptables
+-   :alt: Number of Downloads
+-
+-.. image:: https://pypip.in/license/python-iptables/badge.png
+-   :target: https://pypi.python.org/pypi/python-iptables
+-   :alt: License
+-
+ Installing via pip
+ ------------------
+ 

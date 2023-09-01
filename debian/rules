@@ -1,4 +1,28 @@
-#!/usr/bin/make -f
+#! /usr/bin/make -f
 
+export PYBUILD_NAME=iptables
 %:
-	dh $@
+	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+
+override_dh_auto_build-indep:
+ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))
+	cd doc && \
+	PYTHONPATH=$(CURDIR) http_proxy='http://127.0.0.1:9/' https_proxy='https://127.0.0.1:9/' \
+	python3 -m sphinx -N -E -T -b html . $(CURDIR)/.pybuild/docs/html/
+	rm -rf $(CURDIR)/.pybuild/docs/html/.doctrees
+endif
+
+override_dh_auto_test:
+
+
+DEB_COPYRIGHT_CHECK_IGNORE_REGEX = \
+        debian/.*
+# licensecheck v1
+.PHONY: licensecheck
+licensecheck:
+	LANG=C.UTF-8 licensecheck \
+		-i "^($(DEB_COPYRIGHT_CHECK_IGNORE_REGEX))$$" \
+		--check '.*' --recursive --deb-machine --lines 0 * \
+		> debian/copyright_newhints
+	cmp debian/copyright_hints debian/copyright_newhints \
+		&& rm debian/copyright_newhints
