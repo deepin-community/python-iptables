@@ -1,0 +1,9 @@
+Document: python-iptables
+Title: API Documentation for python-iptables
+Author: Vilmos Nebehaj
+Abstract: This documentation describes the API for python-iptables
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-iptables-doc/html/index.html
+Files: /usr/share/doc/python-iptables-doc/html/*.html
