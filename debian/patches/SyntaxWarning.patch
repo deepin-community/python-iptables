@@ -1,0 +1,22 @@
+--- a/iptc/ip4tc.py
++++ b/iptc/ip4tc.py
+@@ -258,7 +258,7 @@
+ class IPTCModule(object):
+     """Superclass for Match and Target."""
+     pattern = re.compile(
+-        '\s*(!)?\s*--([-\w]+)\s+(!)?\s*"?([^"]*?)"?(?=\s*(?:!?\s*--|$))')
++        r'\s*(!)?\s*--([-\w]+)\s+(!)?\s*"?([^"]*?)"?(?=\s*(?:!?\s*--|$))')
+ 
+     def __init__(self):
+         self._name = None
+--- a/iptc/xtables.py
++++ b/iptc/xtables.py
+@@ -805,7 +805,7 @@
+ _xtables_libdir = os.getenv("XTABLES_LIBDIR")
+ if _xtables_libdir is None:
+     import re
+-    ldconfig_path_regex = re.compile('^(/.*):($| \(.*\)$)')
++    ldconfig_path_regex = re.compile(r'^(/.*):($| \(.*\)$)')
+     import subprocess
+     ldconfig = subprocess.Popen(
+         ('/sbin/ldconfig', '-N', '-v'),

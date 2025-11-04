@@ -1,1 +1,4 @@
 0001-Removed-badges-causing-privacy-breaches.patch
+sphinx-8.0.patch
+remove-runtime-setuptools.patch
+SyntaxWarning.patch

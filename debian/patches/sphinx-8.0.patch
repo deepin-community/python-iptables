@@ -1,0 +1,26 @@
+From: Colin Watson <cjwatson@debian.org>
+Date: Thu, 19 Dec 2024 01:11:38 +0000
+Subject: Port to Sphinx 8.0
+
+The old `intersphinx_mapping` format has been removed; it must now map
+identifiers to (target, inventory) tuples.
+
+Forwarded: https://github.com/ldx/python-iptables/pull/349
+Bug-Debian: https://bugs.debian.org/1090146
+Last-Update: 2024-12-19
+---
+ doc/conf.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/doc/conf.py b/doc/conf.py
+index 6abeedf..ea780c0 100644
+--- a/doc/conf.py
++++ b/doc/conf.py
+@@ -196,6 +196,6 @@ latex_documents = [
+ 
+ 
+ # Example configuration for intersphinx: refer to the Python standard library.
+-intersphinx_mapping = {'http://docs.python.org/': None}
++intersphinx_mapping = {'python': ('http://docs.python.org/', None)}
+ 
+ autoclass_content="both"
