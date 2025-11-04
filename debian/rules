@@ -1,8 +1,9 @@
 #! /usr/bin/make -f
 
 export PYBUILD_NAME=iptables
+
 %:
-	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
+	dh $@ --with sphinxdoc --buildsystem=pybuild
 
 override_dh_auto_build-indep:
 ifeq (,$(filter nodoc,$(DEB_BUILD_OPTIONS)))

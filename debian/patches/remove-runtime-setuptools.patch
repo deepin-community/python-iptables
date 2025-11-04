@@ -1,0 +1,12 @@
+--- a/iptc/util.py
++++ b/iptc/util.py
+@@ -3,7 +3,8 @@
+ import sys
+ import ctypes
+ import ctypes.util
+-from distutils.sysconfig import get_python_lib
++def get_python_lib():
++    return '/usr/lib/python3/dist-packages'
+ from itertools import product
+ from subprocess import Popen, PIPE
+ from sys import version_info
